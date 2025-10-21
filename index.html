@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>فعاليات اللجنة الوطنية للجان العمالية</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {box-sizing: border-box;}
+
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: url('hero-bg.png') center center / cover no-repeat fixed;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .logo img {
+      width: 45vw;
+      max-width: 550px;
+      min-width: 280px;
+      object-fit: contain;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 25px;
+      padding: 40px 30px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      width: 100%;
+      max-width: 900px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+      animation: fadeIn 0.8s ease;
+      position: relative;
+    }
+
+    h1 {
+      font-size: clamp(22px, 4vw, 40px);
+      font-weight: 900;
+      margin-bottom: 15px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      font-size: clamp(14px, 2.5vw, 18px);
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 0 auto 25px;
+      max-width: 800px;
+    }
+
+    .lang-select {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-weight: 800;
+      font-size: clamp(14px, 2.5vw, 18px);
+      color: #fff;
+      text-decoration: none;
+      background: linear-gradient(180deg, #0394c3, #027099);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .content {
+      display: none;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      max-width: 600px;
+      margin: 30px auto 15px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 12px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #0379b4, #026899);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: clamp(13px, 2.5vw, 16px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+    }
+
+    .buttons a:hover {
+      transform: scale(1.05);
+    }
+
+    .note {
+      margin-top: 20px;
+      font-size: clamp(12px, 2vw, 14px);
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.35);
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 600px) {
+      .glass-card {
+        padding: 25px 18px;
+        border-radius: 18px;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .logo img {
+        width: 60vw;
+      }
+
+      .back-btn {
+        top: 10px;
+        left: 10px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+
+  <div class="hero">
+    <div class="logo">
+      <img src="logo.png" alt="شعار اللجنة الوطنية">
+    </div>
+
+    <!-- اختيار اللغة -->
+    <div id="langSelect" class="glass-card">
+      <h1>اختر لغتك | Choose your language</h1>
+      <div class="lang-select">
+        <button class="btn" onclick="showContent('ar')">العربية</button>
+        <button class="btn" onclick="showContent('en')"> English</button>
+      </div>
+    </div>
+
+    <!-- الصفحة العربية -->
+    <div id="content-ar" class="glass-card content" dir="rtl">
+      <button class="back-btn" onclick="goBack()">← العودة</button>
+      <h1>تسجيل فعاليات اللجنة الوطنية للجان العمالية الرياضية والثقافية</h1>
+      <p>أسرة ميدغلف الأعزاء،  
+      ‏يسرنا دعوتكم للمشاركة في النسخة الخامسة من بطولة اللجنة الوطنية للّجان العمالية بالمملكة، والتي تجمع بين التحدّي والمتعة وروح الفريق الواحد!  
+      ‏بادر بالتسجيل الآن عبر الضغط على الأيقونة أدناه وتعبئة البيانات المطلوبة، واختر الأنشطة التي ترغب بالمنافسة فيها — يمكنك المشاركة في أكثر من نشاط!  
+      ‏ننتظركم في أجواء مليئة بالحماس والإبداع.</p>
+
+      <div class="buttons">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsnDI6mB9a_pPGNkHyvQIfpjGGUEta5m_66dgJG6doRLcwMw/viewform" target="_blank">⚽ بطولة كرة القدم</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSffRcr7Ul1sUbKDMto7czCn_J3hfDUkpOzWNVqChpLbCTCCQQ/viewform" target="_blank">🃏 بطولة بلوت</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxU2Ju05g6PG1TQ8huVR6hQXDPWVSrvnw22nMV04Nyh61adQ/viewform" target="_blank">🎾 بطولة بادل</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSduk_uydJXdjh8LKiFX7CmKg2I4YvCQAk5VTUnVFccG1_EU6A/viewform" target="_blank">🎨 مسابقة الرسم الحر</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyNUN3DPOaHV_WpOzlA4TAexjGyOzY5CykmuwE9pXCWEaGlQ/viewform" target="_blank">✍️ مسابقة الشعر</a>
+      </div>
+
+    </div>
+
+    <!-- الصفحة الإنجليزية -->
+    <div id="content-en" class="glass-card content" dir="ltr">
+      <button class="back-btn" onclick="goBack()">← Back</button>
+      <h1>Registration of the Saudi National Committee for Workers Committees – Sports and Cultural Activities</h1>
+      <p>Dear Medgulf Family,  
+      We are delighted to invite you to participate in the 5th Edition of the National Committee for Labor Committees Championship — an event that brings together challenge, excitement, and true team spirit!  
+      Register now by clicking the icons below and filling out the required information.  
+      Choose the activities you’d like to compete in — you can participate in more than one!  
+      We look forward to seeing you in an atmosphere full of energy and enthusiasm!</p>
+
+      <div class="buttons">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdsnDI6mB9a_pPGNkHyvQIfpjGGUEta5m_66dgJG6doRLcwMw/viewform" target="_blank">⚽ Football Tournament</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSffRcr7Ul1sUbKDMto7czCn_J3hfDUkpOzWNVqChpLbCTCCQQ/viewform" target="_blank">🃏 Baloot Championship</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfxU2Ju05g6PG1TQ8huVR6hQXDPWVSrvnw22nMV04Nyh61adQ/viewform" target="_blank">🎾 Padel Tournament</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSduk_uydJXdjh8LKiFX7CmKg2I4YvCQAk5VTUnVFccG1_EU6A/viewform" target="_blank">🎨 Art Competition</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyNUN3DPOaHV_WpOzlA4TAexjGyOzY5CykmuwE9pXCWEaGlQ/viewform" target="_blank">✍️ Poetry Contest</a>
+      </div>
+
+     
+    </div>
+  </div>
+
+  <script>
+    function showContent(lang) {
+      document.getElementById('langSelect').style.display = 'none';
+      document.getElementById(`content-${lang}`).style.display = 'block';
+    }
+    function goBack() {
+      document.getElementById('content-ar').style.display = 'none';
+      document.getElementById('content-en').style.display = 'none';
+      document.getElementById('langSelect').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
