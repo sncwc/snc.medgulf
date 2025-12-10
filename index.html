@@ -1,265 +1,214 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>فعاليات اللجنة الوطنية للجان العمالية</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-
-  <style>
-    * {box-sizing: border-box;}
-
-    body {
-      margin: 0;
-      font-family: 'Tajawal', sans-serif;
-      background: url('hero-bg.png') center center / cover no-repeat fixed;
-      color: #fff;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.45);
-      z-index: 0;
-    }
-
-    .hero {
-      position: relative;
-      width: 100%;
-      max-width: 1100px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 1;
-    }
-
-    .logo img {
-      width: 45vw;
-      max-width: 550px;
-      min-width: 280px;
-      object-fit: contain;
-      margin-bottom: 30px;
-      filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
-    }
-
-    .glass-card {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 25px;
-      padding: 40px 30px;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      width: 100%;
-      max-width: 900px;
-      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
-      animation: fadeIn 0.8s ease;
-      position: relative;
-    }
-
-    h1 {
-      font-size: clamp(22px, 4vw, 40px);
-      font-weight: 900;
-      margin-bottom: 15px;
-      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    }
-
-    p {
-      font-size: clamp(14px, 2.5vw, 18px);
-      line-height: 1.7;
-      color: rgba(255, 255, 255, 0.9);
-      margin: 0 auto 25px;
-      max-width: 800px;
-    }
-
-    .lang-select {
-      margin-top: 25px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      justify-content: center;
-    }
-
-    .btn {
-      padding: 12px 25px;
-      border-radius: 12px;
-      font-weight: 800;
-      font-size: clamp(14px, 2.5vw, 18px);
-      color: #fff;
-      text-decoration: none;
-      background: linear-gradient(180deg, #0394c3, #027099);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
-    }
-
-    .content {
-      display: none;
-      animation: fadeIn 0.6s ease;
-    }
-
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-      max-width: 600px;
-      margin: 30px auto 15px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      padding: 12px;
-      border-radius: 12px;
-      background: linear-gradient(180deg, #0379b4, #026899);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: clamp(13px, 2.5vw, 16px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease;
-    }
-
-    .buttons a:hover {
-      transform: scale(1.05);
-    }
-
-    .note {
-      margin-top: 20px;
-      font-size: clamp(12px, 2vw, 14px);
-      color: rgba(255, 255, 255, 0.85);
-    }
-
-    .back-btn {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-radius: 8px;
-      color: #fff;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 8px 14px;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    .back-btn:hover {
-      background: rgba(255, 255, 255, 0.35);
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-
-    @media (max-width: 600px) {
-      .glass-card {
-        padding: 25px 18px;
-        border-radius: 18px;
-      }
-
-      .buttons {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .logo img {
-        width: 60vw;
-      }
-
-      .back-btn {
-        top: 10px;
-        left: 10px;
-        font-size: 13px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hala Alshammari - Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="overlay"></div>
 
-  <div class="hero">
-    <div class="logo">
-      <img src="logo.png" alt="شعار اللجنة الوطنية">
+<!-- Language Switch Button -->
+<button id="langToggle" class="lang-btn">العربية</button>
+
+<!-- Header -->
+<div class="header glass">
+    <div class="profile">
+        <img src="logo.png" class="profile-img" alt="logo">
+        <div>
+            <h1>Hala Saad Alshammari</h1>
+            <p>IT Officer - Web Developer - Graphic Designer - UI/UX Designer</p>
+        </div>
     </div>
+</div>
 
-    <!-- اختيار اللغة -->
-    <div id="langSelect" class="glass-card">
-      <h1>اختر لغتك | Choose your language</h1>
-      <div class="lang-select">
-        <button class="btn" onclick="showContent('ar')">العربية</button>
-        <button class="btn" onclick="showContent('en')"> English</button>
-      </div>
+<!-- About Section -->
+<section class="section">
+    <h2 class="title">About Me</h2>
+    <p class="about-text">
+        A highly motivated and creative individual with expertise in programming and graphic design, I am passionate about crafting intuitive and engaging user interfaces. I seek to contribute to innovative projects where I can leverage my technical skills and artistic vision to develop effective visual communication and user-centered designs. Committed to continuous learning and professional development, I am eager to deliver impactful solutions that meet user needs and exceed expectations.
+    </p>
+</section>
+<section class="section">
+    <h2 class="title">Tools & Skills</h2>
+
+    <div class="skills-grid">
+
+        <!-- Design Tools -->
+        <div class="skill glass">
+            <img src="figma.png" alt="Figma" class="skill-icon">
+            <p>Figma</p>
+        </div>
+
+        <div class="skill glass">
+            <img src="ps.logo.png" alt="Photoshop" class="skill-icon">
+            <p>Photoshop</p>
+        </div>
+
+        <div class="skill glass">
+            <img src="Ai.logo.png" alt="Illustrator" class="skill-icon">
+            <p>Illustrator</p>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="skill glass">
+            <img src="html-logo.png" alt="HTML" class="skill-icon">
+            <p>HTML</p>
+        </div>
+
+        <div class="skill glass">
+            <img src="css.logo .png" alt="CSS" class="skill-icon">
+            <p>CSS</p>
+        </div>
+
+        <div class="skill glass">
+            <img src="js.logo.png" alt="JavaScript" class="skill-icon">
+            <p>JavaScript</p>
+        </div>
+
+    
+        </div>
+
     </div>
+</section>
 
-    <!-- الصفحة العربية -->
-    <div id="content-ar" class="glass-card content" dir="rtl">
-      <button class="back-btn" onclick="goBack()">← العودة</button>
-      <h1>تسجيل فعاليات اللجنة الوطنية للجان العمالية الرياضية والثقافية</h1>
-      <p>أسرة ميدغلف الأعزاء،  
-      ‏يسرنا دعوتكم للمشاركة في النسخة الخامسة من بطولة اللجنة الوطنية للّجان العمالية بالمملكة، والتي تجمع بين التحدّي والمتعة وروح الفريق الواحد!  
-      ‏بادر بالتسجيل الآن عبر الضغط على الأيقونة أدناه وتعبئة البيانات المطلوبة، واختر الأنشطة التي ترغب بالمنافسة فيها — يمكنك المشاركة في أكثر من نشاط!  
-      ‏ننتظركم في أجواء مليئة بالحماس والإبداع.</p>
+<!-- Certificates -->
+<section class="section">
+    <h2 class="title">Courses & Certifications</h2>
+    <div class="cards-container">
 
-      <div class="buttons">
-        <a href="https://docs.google.com/forms/d/12xxWg_RpnaSEsUcBIYNxBmTHsXMiP7bdP2tG2i7XWVM/edit" target="_blank">⚽ بطولة كرة القدم</a>
-        <a href="https://docs.google.com/forms/d/115-7XRYMqFGF5Tn-N_Xr3IE6HMcJdPAyN9KExMdBexs/edit" target="_blank">🃏 بطولة بلوت</a>
-        <a href="https://docs.google.com/forms/d/1TIi2Rg5UJRaIHiG3UfCSRQduEOzF5IXqaOlzZvdZ61A/edit" target="_blank">🎾 بطولة بادل</a>
-        <a href="https://docs.google.com/forms/d/1O3c5zmJKVqLLOjj0dIBl0bPRLdEL71d7-TxKeisWCHY/edit" target="_blank">🎨 مسابقة الرسم الحر</a>
-        <a href="https://docs.google.com/forms/d/1UWDE0vH5-Ox2pv8xwlZr4hYuw1w3eu9UCOsu4OI35ew/edit" target="_blank">✍️ مسابقة الشعر</a>
-      </div>
+        <div class="glass card">
+            <img src="نمكن.png" class="card-img" alt="certificate">
+            <h3>6 Week UI Design Bootcamp</h3>
+            <p>Provider: NMKKN</p>
+            <p>Year: 2024</p>
+            <p class="desc">
+                Competitor Analysis, UI Design Principles, App Auditing,
+                Wireframing, Hi-Fidelity Design, Advanced Prototyping, Smart Animation,
+                Design Systems, Branding Integration, Creative Problem Solving.
+            </p>
+        </div>
+
+        <div class="glass card">
+            <img src="Web Development.jpeg" class="card-img" alt="certificate">
+            <h3>Web Development Fundamentals</h3>
+            <p>Provider: IBM SkillsBuild</p>
+            <p>Year: 2023</p>
+            <p class="desc">
+                HTML, CSS, JavaScript, Responsive Design, IDE, Backend Basics, Deployment, DevOps,
+                Testing, Accessibility, Visual Studio Code.
+            </p>
+        </div>
+
+        <div class="glass card">
+            <img src="مركز مبدعون.jpg" class="card-img" alt="certificate">
+            <h3>Adobe Certified Professional Qualification Program</h3>
+            <p>Provider: Almobdioon Center</p>
+            <p>Year: 2022</p>
+        </div>
+
+        <div class="glass card">
+            <img src="Cybersecurity risk management.png" class="card-img" alt="certificate">
+            <h3>Cybersecurity Risk Management</h3>
+            <p>Provider: IPA Saudi Arabia</p>
+            <p>Year: 2023</p>
+        </div>
+
+        <div class="glass card">
+            <img src="قواعد بيانات.jpeg" class="card-img" alt="certificate">
+            <h3>SQL Database Programming</h3>
+            <p>Provider: IPA Saudi Arabia</p>
+            <p>Year: 2025</p>
+        </div>
+
+        <div class="glass card">
+            <img src="Foundations of User Experience (UX) Design.jpeg" class="card-img" alt="certificate">
+            <h3>Foundations of UX Design</h3>
+            <p>Provider: Google</p>
+            <p>Year: 2025</p>
+        </div>
+
+        <div class="glass card">
+            <img src="الابتكار الرقمي.png" class="card-img" alt="certificate">
+            <h3>Digital Innovation</h3>
+            <p>Provider: IPA Saudi Arabia</p>
+            <p>Year: 2023</p>
+        </div>
 
     </div>
+</section>
 
-    <!-- الصفحة الإنجليزية -->
-    <div id="content-en" class="glass-card content" dir="ltr">
-      <button class="back-btn" onclick="goBack()">← Back</button>
-      <h1>Registration of the Saudi National Committee for Workers Committees – Sports and Cultural Activities</h1>
-      <p>Dear Medgulf Family,  
-      We are delighted to invite you to participate in the 5th Edition of the National Committee for Labor Committees Championship — an event that brings together challenge, excitement, and true team spirit!  
-      Register now by clicking the icons below and filling out the required information.  
-      Choose the activities you’d like to compete in — you can participate in more than one!  
-      We look forward to seeing you in an atmosphere full of energy and enthusiasm!</p>
+<!-- GitHub Projects -->
+<section class="section">
+    <h2 class="title"> GitHub Projects</h2>
+    <div class="cards-container">
 
-      <div class="buttons">
-        <a href="https://docs.google.com/forms/d/1ghguI0ZOM0YFZH1rud4HxyIWQZSpY82ktqcv6o44cfM/edit" target="_blank">⚽ Football Tournament</a>
-        <a href="https://docs.google.com/forms/d/18VtpFkvEGRarHrLRCK3FYnZq4dIBkyTr9FaQd-UQZTE/edit" target="_blank">🃏 Baloot Championship</a>
-        <a href="https://docs.google.com/forms/d/1CLR3J1THVosV89pDyWWlGnK5jL7kmDXHwLf0X-gtMeU/edit" target="_blank">🎾 Padel Tournament</a>
-        <a href="https://docs.google.com/forms/d/18GeqG3DLAw7n7_A0fJqOoT51YWcN_Jhn2boCNCJwLEI/edit" target="_blank">🎨 Art Competition</a>
-        <a href="https://docs.google.com/forms/d/1VuSTkimSLzwRWSzsz8anxwetuqWYmwNIYN7TgL5gM7c/edit" target="_blank">✍️ Poetry Contest</a>
-      </div>
+        <div class="glass card">
+            <h3>Project Name</h3>
+            <p class="desc">Short description of the project.</p>
+            <a class="btn" target="_blank" href="#">View Project</a>
+        </div>
 
-     
+        <div class="glass card">
+            <h3>Another Project</h3>
+            <p class="desc">Simple project details.</p>
+            <a class="btn" target="_blank" href="#">View Project</a>
+        </div>
+
     </div>
-  </div>
+</section>
 
-  <script>
-    function showContent(lang) {
-      document.getElementById('langSelect').style.display = 'none';
-      document.getElementById(`content-${lang}`).style.display = 'block';
+<!-- Figma Projects -->
+<section class="section">
+    <h2 class="title"> Figma Projects</h2>
+    <div class="cards-container">
+
+        <div class="glass card">
+            <h3>Figma – Bootcamp Week 2</h3>
+            <iframe class="figma-frame"
+                src="https://www.figma.com/design/UUnizk..."
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="glass card">
+            <h3>Prototype 1</h3>
+            <iframe class="figma-frame"
+                src="https://www.figma.com/proto/UUnizk..."
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="glass card">
+            <h3>Prototype 2</h3>
+            <iframe class="figma-frame"
+                src="https://www.figma.com/proto/UUnizk..."
+                allowfullscreen></iframe>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer glass">
+    © 2025 — Hala Saad Alshammari
+</footer>
+
+<!-- Language Switch Script -->
+<script>
+document.getElementById("langToggle").onclick = function () {
+    const html = document.documentElement;
+    const current = html.getAttribute("lang");
+
+    if (current === "en") {
+        html.setAttribute("lang", "ar");
+        html.setAttribute("dir", "rtl");
+        this.textContent = "English";
+    } else {
+        html.setAttribute("lang", "en");
+        html.setAttribute("dir", "ltr");
+        this.textContent = "العربية";
     }
-    function goBack() {
-      document.getElementById('content-ar').style.display = 'none';
-      document.getElementById('content-en').style.display = 'none';
-      document.getElementById('langSelect').style.display = 'block';
-    }
-  </script>
+};
+</script>
+
 </body>
 </html>
